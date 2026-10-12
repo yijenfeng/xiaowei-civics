@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>地方自治、媒體與公共意見｜筱葳學測公民</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+  /* Layout: single reading column, PART sections in sequence, English passages set apart as "answer sheet" panels */
+  :root{
+    --bg:#F6F3EE;
+    --surface:#FFFFFF;
+    --surface-2:#EFE8DF;
+    --ink:#2A2420;
+    --ink-muted:#6B5F55;
+    --line:#DDD1C3;
+    --accent:#A2581C;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#F5E4D3;
+    --amber:#2B6A99;  --amber-ink:#FFFFFF;
+    --teal:#4E9C8C;   --teal-ink:#0B241F;
+    --bad:#B5483B;    --bad-soft:#F6E1DD;
+    --hl-ts:#F3DFCB;  --hl-sup:#E1EAF3;  --hl-ex:#F7E3C6;  --hl-cs:#E9DDF2;
+    --grid-line:rgba(162,88,28,0.07);
+    --shadow:0 1px 2px rgba(28,42,36,0.06), 0 8px 24px rgba(28,42,36,0.05);
+    --f-display:'Noto Serif TC','Songti TC','PMingLiU',serif;
+    --f-body:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    --f-en:'Source Serif 4','Georgia','Times New Roman',serif;
+    --f-mono:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17120E; --surface:#211A15; --surface-2:#2A221B; --ink:#F0E9E2; --ink-muted:#B3A598;
+      --line:#3E3329; --accent:#E9A86A; --accent-ink:#1E1206; --accent-soft:#3A2716;
+      --amber:#86BCE6; --amber-ink:#0B1521; --teal:#3E8776; --teal-ink:#E7F5F1;
+      --bad:#E48A7D; --bad-soft:#3A201C;
+      --hl-ts:#4A3119; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+      --grid-line:rgba(233,168,106,0.07);
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#17120E; --surface:#211A15; --surface-2:#2A221B; --ink:#F0E9E2; --ink-muted:#B3A598;
+    --line:#3E3329; --accent:#E9A86A; --accent-ink:#1E1206; --accent-soft:#3A2716;
+    --amber:#86BCE6; --amber-ink:#0B1521; --teal:#3E8776; --teal-ink:#E7F5F1;
+    --bad:#E48A7D; --bad-soft:#3A201C;
+    --hl-ts:#4A3119; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+    --grid-line:rgba(233,168,106,0.07);
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:17px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+  h1,h2,h3{ font-family:var(--f-display); font-weight:600; text-wrap:balance; margin:0; color:var(--ink); }
+  a{ color:var(--accent); }
+  p{ margin:0; }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .mono{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:780px; margin:0 auto; padding-inline:1.25rem; padding-block:0 5rem; }
+
+  .back{ display:inline-block; margin-top:1.6rem; font-size:0.85rem; color:var(--ink-muted); text-decoration:none; }
+  .back:hover{ color:var(--accent); }
+
+  .hero{ padding-block:2rem 1.6rem; display:grid; gap:0.9rem; }
+  .eyebrow{
+    justify-self:start;
+    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em;
+    color:var(--accent); background:var(--accent-soft); border:1px solid var(--line);
+    padding:0.3rem 0.7rem; border-radius:4px;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.5rem); line-height:1.25; }
+  .hero .sub{ color:var(--ink-muted); font-size:1.03rem; max-width:640px; }
+
+  .lede{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:1.1rem 1.3rem; box-shadow:var(--shadow); display:grid; gap:0.9rem;
+  }
+  .toc{ display:flex; flex-wrap:wrap; gap:0.5rem; padding:0; margin:0; list-style:none; }
+  .toc a{
+    display:inline-flex; gap:0.45rem; align-items:center; text-decoration:none;
+    font-size:0.88rem; color:var(--ink); background:var(--surface-2); border:1px solid var(--line);
+    padding:0.25rem 0.75rem; border-radius:999px;
+  }
+  .toc a:hover{ border-color:var(--accent); color:var(--accent); }
+  .toc b{ font-family:var(--f-mono); color:var(--accent); font-weight:700; }
+
+  section.part{ margin-top:3.2rem; display:grid; gap:1.1rem; }
+  .part-kicker{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.08em; color:var(--accent); }
+  .part h2{ font-size:1.55rem; line-height:1.35; }
+  .part h3{ font-size:1.08rem; margin-top:0.4rem; }
+
+  .step{ display:grid; gap:0.5rem; }
+  .step-tag{
+    justify-self:start; font-family:var(--f-mono); font-size:0.72rem; font-weight:700;
+    padding:0.1rem 0.55rem; border-radius:4px; background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--line);
+  }
+  .step-tag.rule{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+  .prompt{
+    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber);
+    border-radius:6px; padding:0.9rem 1.1rem; font-size:0.95rem;
+  }
+  .prompt .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; display:block; margin-bottom:0.2rem; }
+
+  .sheet{
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:1rem 1.2rem; box-shadow:var(--shadow);
+    font-family:var(--f-en); font-size:1.06rem; line-height:1.85;
+  }
+  .sheet p + p{ margin-top:0.8rem; }
+  .sheet-head{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.3rem 1rem;
+    font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); margin-bottom:0.5rem;
+  }
+  .sheet.weak{ border-color:var(--bad); }
+  .sheet .err{ text-decoration:underline wavy var(--bad); text-underline-offset:4px; }
+
+  .compare{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:0.9rem; }
+  .compare > *{ min-width:0; }
+
+  .note{
+    background:var(--accent-soft); border:1px solid var(--line); border-radius:8px;
+    padding:0.8rem 1rem; font-size:0.93rem;
+  }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; font-size:0.92rem; min-width:520px; }
+  th,td{ text-align:left; padding:0.6rem 0.85rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--surface-2); font-weight:700; font-size:0.85rem; }
+  tr:last-child td{ border-bottom:none; }
+  td.en{ font-family:var(--f-en); font-size:1rem; }
+
+  /* score band bar, drawn to scale 0–20 */
+  .bands{ display:grid; gap:0.4rem; }
+  .band-bar{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:40px; }
+  .band-bar div{ display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.15; font-size:0.78rem; font-weight:700; }
+  .band-bar small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+  .b0{ background:var(--bad-soft); color:var(--bad); }
+  .b1{ background:var(--surface-2); color:var(--ink-muted); }
+  .b2{ background:var(--hl-sup); color:var(--ink); }
+  .b3{ background:var(--hl-ts); color:var(--ink); }
+  .b4{ background:var(--accent); color:var(--accent-ink); }
+  .band-scale{ display:flex; justify-content:space-between; font-family:var(--f-mono); font-size:0.7rem; color:var(--ink-muted); }
+
+  /* paragraph anatomy */
+  .anatomy-ctrl{ display:flex; flex-wrap:wrap; gap:0.5rem 1rem; align-items:center; }
+  button.toggle{
+    font:inherit; font-size:0.88rem; cursor:pointer;
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:0.4rem 0.9rem;
+  }
+  button.toggle[aria-pressed="false"]{ background:var(--surface); color:var(--accent); border:1px solid var(--accent); }
+  .key{ display:flex; flex-wrap:wrap; gap:0.3rem 0.9rem; font-size:0.82rem; color:var(--ink-muted); }
+  .key span{ display:inline-flex; align-items:center; gap:0.35rem; }
+  .key i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .anatomy.on .ts{ background:var(--hl-ts); }
+  .anatomy.on .sup{ background:var(--hl-sup); }
+  .anatomy.on .ex{ background:var(--hl-ex); }
+  .anatomy.on .cs{ background:var(--hl-cs); }
+  .anatomy .ts,.anatomy .sup,.anatomy .ex,.anatomy .cs{ border-radius:3px; padding:0 2px; transition:background .2s ease; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  .anatomy .tr{ font-weight:600; }
+  .anatomy.on .tr{ color:var(--accent); }
+
+  .skeleton{ display:grid; gap:0.4rem; counter-reset:sk; }
+  .skeleton div{
+    display:grid; grid-template-columns:7.5rem 1fr; gap:0.8rem; align-items:baseline;
+    padding:0.55rem 0.9rem; border-radius:6px; font-size:0.92rem;
+  }
+  .skeleton div > *{ min-width:0; }
+  .skeleton b{ font-size:0.86rem; }
+  @media (max-width:480px){ .skeleton div{ grid-template-columns:1fr; gap:0.1rem; } }
+
+  ul.clean{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; }
+
+  .timeline{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:46px; }
+  .timeline div{ display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:0.78rem; font-weight:700; line-height:1.15; text-align:center; padding:0 0.2rem; }
+  .timeline small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+
+  .checklist{ display:grid; gap:0.35rem; }
+  .checklist label{ display:flex; gap:0.6rem; align-items:flex-start; font-size:0.93rem; cursor:pointer; }
+  .checklist input{ margin-top:0.45rem; accent-color:var(--accent); }
+
+  /* practice */
+  .practice{ margin-top:3.2rem; display:grid; gap:1rem; }
+  .qcard{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; display:grid; gap:0.6rem; }
+  .qhead{ display:flex; gap:0.6rem; align-items:baseline; }
+  .qnum{ font-family:var(--f-mono); font-weight:700; color:var(--accent); flex:none; }
+  .qcard .en{ font-family:var(--f-en); font-size:1.02rem; }
+  .opts{ margin:0; padding-left:1.4rem; font-family:var(--f-en); font-size:1rem; display:grid; gap:0.15rem; }
+  details{ border-top:1px dashed var(--line); padding-top:0.5rem; }
+  summary{ cursor:pointer; color:var(--accent); font-size:0.88rem; font-weight:500; }
+  details .ans{ margin-top:0.5rem; font-size:0.93rem; }
+
+  /* draft box */
+  .draft{ display:grid; gap:0.6rem; }
+  textarea{
+    width:100%; min-height:260px; resize:vertical;
+    font-family:var(--f-en); font-size:1.02rem; line-height:1.75;
+    background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:0.9rem 1rem;
+  }
+  textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .meters{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .meter{ font-family:var(--f-mono); font-size:0.8rem; padding:0.25rem 0.7rem; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-muted); }
+  .meter.ok{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .meter.warn{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+
+  footer{ margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-muted); font-size:0.85rem; display:grid; gap:0.4rem; }
+  footer .id{ font-family:var(--f-mono); font-size:0.8rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem; }
+</style>
+<style>
+  .wt td.zh{ transition:filter .2s ease, opacity .2s ease; }
+  .masked td.zh{ filter:blur(6px); opacity:.55; user-select:none; }
+  .masked td.zh:hover,.masked td.zh:focus{ filter:none; opacity:1; }
+  .tools{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.85rem; color:var(--ink-muted); }
+  .pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .pair > *{ min-width:0; }
+  .ex-line{ font-family:var(--f-en); font-size:1.02rem; }
+  .ex-line + .ex-line{ margin-top:0.3rem; }
+  .ok{ color:var(--accent); font-weight:600; }
+  .no{ color:var(--bad); text-decoration:line-through; text-decoration-thickness:1px; }
+  .hl{ background:var(--hl-ex); border-radius:3px; padding:0 2px; }
+  .hl2{ background:var(--hl-ts); border-radius:3px; padding:0 2px; }
+  .hl3{ background:var(--hl-sup); border-radius:3px; padding:0 2px; }
+  .formula{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1.1rem; font-family:var(--f-mono); font-size:0.9rem; line-height:1.9; overflow-x:auto; }
+</style>
+<style>
+  .opt-list{ display:grid; gap:0.4rem; }
+  .opt-btn{
+    display:block; width:100%; text-align:left; cursor:pointer;
+    font-family:var(--f-en); font-size:1rem; line-height:1.5; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.45rem 0.8rem;
+  }
+  .opt-btn:hover{ border-color:var(--accent); }
+  .opt-btn.right{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .opt-btn.wrong{ background:var(--bad-soft); color:var(--bad); border-color:var(--bad); }
+  .opt-btn:disabled{ cursor:default; }
+  .scorebar{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.9rem; color:var(--ink-muted); }
+  .scorebar .meter{ font-size:0.85rem; }
+  .passage{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; font-family:var(--f-en); font-size:1.04rem; line-height:1.9; box-shadow:var(--shadow); }
+  .passage p + p{ margin-top:0.7rem; }
+  .blank{ font-family:var(--f-mono); font-size:0.85rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:4px; padding:0 0.35rem; }
+  .optgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.4rem; font-family:var(--f-en); }
+  .optgrid span{ background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.3rem 0.6rem; }
+  .fill{ width:100%; font:inherit; font-family:var(--f-en); background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:0.4rem 0.6rem; }
+  .fill:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .panels{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0.6rem; }
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.8rem; font-size:0.9rem; }
+  .panel b{ font-family:var(--f-mono); color:var(--accent); display:block; font-size:0.78rem; }
+  .log-form{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.6rem; align-items:end; }
+  .log-form label{ display:grid; gap:0.2rem; font-size:0.82rem; color:var(--ink-muted); }
+  select.fill{ appearance:auto; }
+</style>
+<style>
+  .chk-row{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; }
+  textarea.ans-in{ min-height:0; resize:vertical; font-size:1rem; line-height:1.6; padding:0.5rem 0.7rem; }
+  .verdict{ font-size:0.9rem; display:grid; gap:0.35rem; }
+  .verdict:empty{ display:none; }
+  .vd{ display:inline-block; font-weight:700; font-size:0.85rem; padding:0.1rem 0.6rem; border-radius:999px; }
+  .vd.good{ background:var(--accent); color:var(--accent-ink); }
+  .vd.bad{ background:var(--bad-soft); color:var(--bad); }
+  .vd.warn{ background:var(--surface-2); color:var(--ink-muted); }
+  .dx{ display:grid; gap:0.25rem; font-family:var(--f-en); font-size:1rem; background:var(--surface-2); border-radius:6px; padding:0.5rem 0.75rem; }
+  .dx b{ font-family:var(--f-body); font-size:0.75rem; color:var(--ink-muted); display:inline-block; min-width:4.5rem; }
+  .dx-bad{ color:var(--bad); text-decoration:underline wavy var(--bad); text-underline-offset:3px; }
+  .dx-good{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+  .dx-note{ font-size:0.8rem; color:var(--ink-muted); }
+  td .verdict{ margin-top:0.3rem; }
+</style>
+<style>
+  /* history additions: vertical chronology, primary-source boxes */
+  .chron{ list-style:none; margin:0.8rem 0 0; padding:0 0 0 0.2rem; display:grid; gap:0; }
+  .chron li{ display:grid; grid-template-columns:5.6rem 1fr; gap:0.9rem; position:relative; padding:0.35rem 0 0.55rem; }
+  .chron li > *{ min-width:0; }
+  .chron li::before{ content:''; position:absolute; left:6.05rem; top:0; bottom:0; width:2px; background:var(--line); }
+  .chron li::after{ content:''; position:absolute; left:calc(6.05rem - 4px); top:0.85rem; width:10px; height:10px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
+  .chron li.turn::after{ background:var(--accent); }
+  .chron .yr{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:0.82rem; font-weight:700; color:var(--accent); text-align:right; padding-top:0.15rem; }
+  .chron .ev{ padding-left:0.9rem; font-size:0.95rem; line-height:1.65; }
+  .chron .ev small{ display:block; color:var(--ink-muted); font-size:0.82rem; }
+  @media (max-width:480px){
+    .chron li{ grid-template-columns:4.4rem 1fr; gap:0.6rem; }
+    .chron li::before{ left:4.75rem; } .chron li::after{ left:calc(4.75rem - 4px); }
+  }
+  .src{ background:var(--surface-2); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.7rem 1rem; font-family:var(--f-display); font-size:1rem; line-height:1.85; margin:0; }
+  .src cite{ display:block; font-style:normal; font-family:var(--f-body); font-size:0.78rem; color:var(--ink-muted); margin-top:0.3rem; }
+  .qcard .qtext{ margin:0; }
+  textarea.fill{ font-family:var(--f-body); }
+  .kwtag{ font-family:var(--f-mono); font-size:0.75rem; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); border-radius:4px; padding:0.05rem 0.4rem; white-space:nowrap; }
+</style>
+
+<style>
+  /* geography additions */
+  .chain .yr{ font-family:var(--f-body); font-size:0.8rem; }
+  .fig{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; box-shadow:var(--shadow); display:grid; gap:0.4rem; }
+  .fig svg{ width:100%; height:auto; display:block; }
+  .fig figcaption{ font-size:0.82rem; color:var(--ink-muted); }
+  .fig text{ font-family:var(--f-body); }
+  .twocol{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .twocol > *{ min-width:0; }
+  .card-mini{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.9rem; font-size:0.92rem; }
+  .card-mini b{ display:block; font-family:var(--f-display); font-size:1rem; margin-bottom:0.2rem; }
+</style>
+<style>
+  /* civics additions */
+  .chain{ list-style:none; margin:0; padding:0; display:grid; gap:0.4rem; }
+  .chain li{ display:grid; grid-template-columns:auto 1fr; gap:0.7rem; align-items:baseline; background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:0.5rem 0.85rem; font-size:0.93rem; }
+  .chain li > *{ min-width:0; }
+  .chain li b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); white-space:nowrap; }
+  .chain li.arrow{ background:none; border:none; padding:0 0 0 1.2rem; color:var(--ink-muted); font-size:0.85rem; }
+  .vs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:0.8rem; }
+  .vs > *{ min-width:0; }
+  .case{ background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.8rem 1.1rem; font-size:0.95rem; display:grid; gap:0.35rem; }
+  .case .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; }
+  .opt-btn{ font-family:var(--f-body); }
+  .bridge{ display:grid; gap:0.45rem; border-top:1px dashed var(--line); padding-top:0.8rem; font-size:0.9rem; }
+  .bridge .where{ display:flex; flex-wrap:wrap; gap:0.4rem; align-items:center; }
+  .bridge .tag{ font-family:var(--f-mono); font-size:0.72rem; font-weight:700; padding:0.1rem 0.55rem; border-radius:4px; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); }
+  .bridge .tag.th{ background:var(--surface-2); color:var(--ink-muted); }
+  .bridge .step{ display:grid; grid-template-columns:3.2rem 1fr; gap:0.6rem; align-items:baseline; }
+  .bridge .step > *{ min-width:0; }
+  .bridge .step b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); }
+  .bridge .step.now b{ color:var(--accent); }
+  .bridge a{ text-decoration:none; font-weight:500; }
+  .bridge a:hover{ text-decoration:underline; }
+  .xl{ display:grid; gap:0.5rem; }
+  .xl a{ display:grid; grid-template-columns:minmax(6.5rem,auto) 1fr; gap:0.3rem 0.9rem; align-items:baseline; text-decoration:none; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.9rem; font-size:0.92rem; }
+  .xl a > *{ min-width:0; }
+  .xl a:hover{ border-color:var(--accent); }
+  .xl a b{ font-family:var(--f-display); color:var(--accent); }
+  .xl a small{ display:block; color:var(--ink-muted); font-size:0.8rem; }
+  @media (max-width:480px){ .xl a{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="page">
+<a class="back" href="index.html">← 回到公民學習地圖</a>
+<header class="hero">
+  <span class="eyebrow">民主政治・2-3</span>
+  <h1>地方自治、媒體與公共意見</h1>
+  <p class="sub">第 6 週。中央和地方怎麼分工？媒體和演算法如何影響我們覺得「什麼議題重要」？民調數字要怎麼讀才不會被騙？</p>
+</header>
+<div class="lede"><p>這一節回答一個問題：「新聞天天報導的議題，就一定是最重要的議題嗎？」</p><div class="bridge"><div class="where"><span class="tag">民主政治・誰來決定</span></div><div class="step"><b>承接</b><span><a href="p-election.html">2-2　選舉、政黨與公民參與</a>：人民選出代表並監督。</span></div><div class="step now"><b>本週</b><span>地方自治分擔決定；媒體與民調影響公共意見。</span></div><div class="step"><b>接到</b><span><a href="l-constitution.html">3-1　憲法與基本權</a>：決定做出來後，要受規則約束。最高的規則是憲法。</span></div></div><ul class="toc"><li><a href="#p1"><b>1</b>地方自治</a></li><li><a href="#p2"><b>2</b>媒體</a></li><li><a href="#p3"><b>3</b>民意調查</a></li><li><a href="#practice"><b>✎</b>練習</a></li></ul></div>
+<section class="part" id="p1"><span class="part-kicker">PART 1 ・ 地方自治</span><h2>中央與地方的分工</h2><p><b>均權原則</b>：依事務的性質分配權限。有全國一致性質的歸中央（國防、外交、貨幣），有因地制宜性質的歸地方（地方交通、垃圾清運、地方觀光）。</p><div class="table-wrap"><table><thead><tr><th>層級（地方制度法）</th><th>行政機關</th><th>立法機關</th></tr></thead><tbody><tr><td>直轄市</td><td>市政府（市長）</td><td>市議會</td></tr><tr><td>縣（市）</td><td>縣（市）政府</td><td>縣（市）議會</td></tr><tr><td>鄉（鎮、市）</td><td>鄉（鎮、市）公所</td><td>鄉（鎮、市）民代表會</td></tr><tr><td>直轄市山地原住民區</td><td>區公所</td><td>區民代表會</td></tr></tbody></table></div><div class="table-wrap"><table><thead><tr><th>自治法規</th><th>誰訂定</th><th>重點</th></tr></thead><tbody><tr><td>自治條例</td><td>經地方立法機關（議會）通過</td><td>可以規定罰則，例如罰鍰（最高新臺幣 10 萬元），不能規定刑罰</td></tr><tr><td>自治規則</td><td>地方行政機關訂定</td><td>依法律或自治條例授權，或就自治事項訂定</td></tr></tbody></table></div><div class="note">地方自治法規不能牴觸憲法、法律與上級法規。中央與地方的權限爭議，可以聲請憲法法庭解決。</div></section>
+<section class="part" id="p2"><span class="part-kicker">PART 2 ・ 媒體</span><h2>媒體、演算法與假訊息</h2><div class="table-wrap"><table><thead><tr><th>概念</th><th>意思</th></tr></thead><tbody><tr><td>議題設定</td><td>媒體報導愈多的議題，民眾愈覺得重要；媒體影響我們「想什麼」</td></tr><tr><td>框架效應</td><td>同一件事用不同角度呈現，會影響我們「怎麼想」</td></tr><tr><td>同溫層／回聲室</td><td>演算法推薦相似內容，人愈來愈只接觸相同意見，可能走向極化</td></tr><tr><td>媒體近用權</td><td>民眾接近、使用媒體表達意見的權利，例如投書、公共媒體節目</td></tr></tbody></table></div><h3>查證四步</h3><ol class="chain"><li><b>查來源</b><span>誰發布？是不是可信的機構或媒體？</span></li><li class="arrow">↓</li><li><b>找原始資料</b><span>有沒有連到研究、公文、原始影片？</span></li><li class="arrow">↓</li><li><b>看時間</b><span>是不是舊新聞重新轉傳？</span></li><li class="arrow">↓</li><li><b>交叉比對</b><span>查證平台、官方說明、其他媒體怎麼報導？</span></li></ol></section>
+<section class="part" id="p3"><span class="part-kicker">PART 3 ・ 民調</span><h2>民意調查怎麼讀</h2><div class="table-wrap"><table><thead><tr><th>要看什麼</th><th>為什麼</th></tr></thead><tbody><tr><td>樣本是否具代表性</td><td>只在網路上自由填答的調查，樣本會偏向特定族群</td></tr><tr><td>抽樣誤差</td><td>例如「95% 信賴水準、誤差 ±3 個百分點」：真實支持度大致落在調查值 ±3 之間</td></tr><tr><td>題目措辭</td><td>帶有引導性的問法會影響結果</td></tr><tr><td>委託單位</td><td>注意利益衝突，最好比較多家民調</td></tr></tbody></table></div><div class="case"><span class="label">判讀示範</span><div>A 候選人支持度 42%、B 候選人 39%，誤差 ±3 個百分點。A 的範圍是 39%–45%，B 是 36%–42%，兩者重疊，所以<b>不能斷定 A 領先</b>，只能說「在誤差範圍內」。</div></div></section>
+<section class="practice" id="practice"><span class="part-kicker">練習</span><h2>動手試試看</h2><div class="scorebar"><span>選擇題點選答案、簡答題按「對答案」，作答紀錄會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q1</span><span>依均權原則，中央與地方的權限分配主要依據什麼？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 人口多寡</button><button class="opt-btn" type="button" data-k="B">(B) 事務的性質</button><button class="opt-btn" type="button" data-k="C">(C) 政黨勢力</button><button class="opt-btn" type="button" data-k="D">(D) 財政收入多少</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>全國一致性質歸中央，因地制宜性質歸地方。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q2</span><span>縣（市）的自治條例要經過哪個機關通過？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 縣（市）政府</button><button class="opt-btn" type="button" data-k="B">(B) 縣（市）議會</button><button class="opt-btn" type="button" data-k="C">(C) 立法院</button><button class="opt-btn" type="button" data-k="D">(D) 行政院</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>自治條例是地方的「法律」，要經地方立法機關通過。</div></details></div><div class="qcard mcq" data-ans="D"><div class="qhead"><span class="qnum">Q3</span><span>縣市可以在自治條例中規定哪一種罰則？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 有期徒刑</button><button class="opt-btn" type="button" data-k="B">(B) 死刑</button><button class="opt-btn" type="button" data-k="C">(C) 拘役</button><button class="opt-btn" type="button" data-k="D">(D) 罰鍰等行政罰</button></div><details><summary>看解析</summary><div class="ans"><b>D。</b>刑罰只能由法律（立法院）規定；自治條例可以訂罰鍰等行政罰。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q4</span><span>某議題被新聞連續報導兩週後，民調中認為它「最重要」的人大增。最能說明這個現象的是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 媒體近用權</button><button class="opt-btn" type="button" data-k="B">(B) 議題設定</button><button class="opt-btn" type="button" data-k="C">(C) 再社會化</button><button class="opt-btn" type="button" data-k="D">(D) 抽樣誤差</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>媒體報導的頻率影響民眾認為哪些議題重要。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q5</span><span>民調顯示 A 支持度 42%、B 39%，抽樣誤差 ±3 個百分點。下列判斷何者最恰當？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) A 確定領先 3 個百分點</button><button class="opt-btn" type="button" data-k="B">(B) 兩人差距在誤差範圍內，不能斷定誰領先</button><button class="opt-btn" type="button" data-k="C">(C) B 其實領先</button><button class="opt-btn" type="button" data-k="D">(D) 這份民調一定是錯的</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>兩者的可能範圍重疊，無法斷定領先者。</div></details></div><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q6</span><span>社群平台不斷推薦和使用者立場相同的內容，使他愈來愈少接觸不同意見。這是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 同溫層（回聲室）效應</button><button class="opt-btn" type="button" data-k="B">(B) 均權原則</button><button class="opt-btn" type="button" data-k="C">(C) 框架效應</button><button class="opt-btn" type="button" data-k="D">(D) 社會流動</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>演算法造成意見封閉，可能加深社會極化。</div></details></div><div class="qcard txt"><div class="qhead"><span class="qnum">Q7</span><span>收到一則「某食品會致癌」的轉傳訊息，請寫出兩個查證步驟。</span></div><textarea class="fill ans-in" rows="3" id="p3-7" autocomplete="off" spellcheck="false" aria-label="作答" placeholder="用一到兩句話寫下你的答案" data-kw="[[&quot;來源&quot;, &quot;出處&quot;, &quot;誰發&quot;, &quot;發布者&quot;, &quot;作者&quot;], [&quot;比對&quot;, &quot;查證&quot;, &quot;其他&quot;, &quot;官方&quot;, &quot;原始&quot;, &quot;日期&quot;, &quot;時間&quot;]]"></textarea><div class="verdict" data-for="p3-7"></div><div class="chk-row"><button class="toggle chk" type="button">對答案</button></div><details><summary>看參考答案與解析</summary><div class="ans"><p class="ex-line">先查訊息來源與原始出處，確認是不是可信的機構或研究；再到事實查核平台、主管機關公告或其他媒體交叉比對，也注意發布日期是不是舊聞。</p><p style="margin-top:0.3rem">寫出「查來源」加上「交叉比對／找原始資料／看日期」任一項即可。</p><p style="margin-top:0.3rem;font-size:0.85rem;color:var(--ink-muted)">系統只檢查是否寫到關鍵詞：<span class="kwtag">來源 / 出處 / 誰發 / 發布者 / 作者</span>　<span class="kwtag">比對 / 查證 / 其他 / 官方 / 原始 / 日期 / 時間</span>（每組至少寫到一個）。寫得通順、因果清楚才是得分關鍵，請對照參考答案。</p></div></details></div></section>
+<section class="part" id="xlinks"><span class="part-kicker">回頭看・往後接</span><h2>這些概念在別的單元還會出現</h2><div class="xl"><a href="l-criminal.html"><span><b>自治條例不能訂刑罰</b></span><span>3-3　刑法與司法程序<small>往後接第 9 週 →・刑罰屬罪刑法定，只能由法律規定</small></span></a><a href="l-constitution.html"><span><b>法律保留</b></span><span>3-1　憲法與基本權<small>往後接第 7 週 →・限制人民權利要有法律依據</small></span></a><a href="c-society.html"><span><b>媒體與社會化</b></span><span>1-2　社會化、團體與文化<small>← 回頭看第 2 週・媒體是影響最廣的社會化機構</small></span></a></div></section>
+<section class="part"><span class="part-kicker">本節重點</span><ul class="clean"><li>均權原則依事務性質分工；地方有行政機關與立法機關。</li><li>自治條例經議會通過，可訂罰鍰，不能訂刑罰。</li><li>議題設定影響「想什麼」，框架效應影響「怎麼想」。</li><li>查證：查來源、找原始資料、看時間、交叉比對。</li><li>民調差距在誤差範圍內，不能斷定誰領先。</li></ul></section>
+<footer>
+  <p>練習題的情境與數據為教學用自編或示意；內容依部定必修「公民與社會」課程整理，法規以現行條文為準，若有修法請以最新規定為準。正式考試範圍以大考中心公告為準。</p>
+  <div class="id"><span>筱葳學測公民</span><span>民主政治 2-3</span></div>
+</footer>
+</div>
+<script>
+(function(){
+  var PAGE = (document.querySelector('.eyebrow') || {}).textContent || location.pathname;
+  var SKEY = 'civ-practice-v1:' + PAGE;
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(SKEY) || '{}') || {}; } catch (e) { saved = {}; }
+  function persist(){ try { localStorage.setItem(SKEY, JSON.stringify(saved)); } catch (e) {} }
+
+  var cards = [].slice.call(document.querySelectorAll('.qcard.mcq[data-ans], .qcard.txt'));
+  var state = {};
+  var sb = document.getElementById('score');
+  function updScore(){
+    if (!sb) return;
+    var ok = 0, done = 0;
+    cards.forEach(function(c, i){ if (state[i] !== undefined) { done++; if (state[i]) ok++; } });
+    sb.textContent = '答對 ' + ok + ' / ' + cards.length + (done === cards.length && cards.length ? '・全部完成' : '');
+    sb.className = 'meter ' + (done === cards.length && cards.length ? (ok / cards.length >= 0.8 ? 'ok' : 'warn') : '');
+  }
+
+  /* ---------- multiple choice ---------- */
+  function lockMcq(q, k, idx){
+    var ans = q.getAttribute('data-ans');
+    var btn = q.querySelector('.opt-btn[data-k="' + k + '"]');
+    if (!btn) return;
+    if (k === ans) btn.classList.add('right');
+    else { btn.classList.add('wrong'); var r = q.querySelector('.opt-btn[data-k="' + ans + '"]'); if (r) r.classList.add('right'); }
+    q.querySelectorAll('.opt-btn').forEach(function(x){ x.disabled = true; });
+    var d = q.querySelector('details'); if (d) d.open = true;
+    state[idx] = (k === ans);
+  }
+
+  /* ---------- text answers ---------- */
+  function expand(s){
+    return s.replace(/[’‘`]/g, "'")
+      .replace(/\b(won)'t\b/g, 'will not').replace(/\bcan't\b/g, 'can not').replace(/\bcannot\b/g, 'can not')
+      .replace(/n't\b/g, ' not')
+      .replace(/\b(it|that|there|what|he|she|who)'s\b/g, '$1 is')
+      .replace(/'re\b/g, ' are').replace(/'ve\b/g, ' have').replace(/'ll\b/g, ' will').replace(/\bi'm\b/g, 'i am');
+  }
+  function norm(s){
+    s = expand(String(s).toLowerCase());
+    s = s.replace(/[（）()「」『』“”"]/g, ' ')
+         .replace(/[，。、！？；：,.!?;:／\/|]/g, ' ')
+         .replace(/(\w)-(\w)/g, '$1$2')
+         .replace(/\s+/g, ' ').trim();
+    return s;
+  }
+  function toks(s){ return norm(s) ? norm(s).split(' ') : []; }
+  function lcs(a, b){
+    var m = a.length, n = b.length, dp = [], i, j;
+    for (i = 0; i <= m; i++) { dp.push(new Array(n + 1).fill(0)); }
+    for (i = m - 1; i >= 0; i--) for (j = n - 1; j >= 0; j--)
+      dp[i][j] = a[i] === b[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    var ka = {}, kb = {}; i = 0; j = 0;
+    while (i < m && j < n) {
+      if (a[i] === b[j]) { ka[i] = 1; kb[j] = 1; i++; j++; }
+      else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+    }
+    return { len: dp[0][0], ka: ka, kb: kb };
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function judge(inp){
+    var val = inp.value;
+    if (!norm(val)) return { empty: true };
+    var kw = inp.getAttribute('data-kw');
+    if (kw) {
+      var groups = JSON.parse(kw), low = val.toLowerCase();
+      var ok = groups.every(function(g){ return g.some(function(w){ return low.indexOf(String(w).toLowerCase()) !== -1; }); });
+      return { kw: true, ok: ok };
+    }
+    var accepts = (inp.getAttribute('data-accept') || '').split('||').filter(Boolean);
+    var you = toks(val), best = null;
+    for (var i = 0; i < accepts.length; i++) {
+      var ref = toks(accepts[i]);
+      if (ref.join(' ') === you.join(' ')) return { ok: true, exact: true };
+      var r = lcs(you, ref), sim = (2 * r.len) / (you.length + ref.length || 1);
+      if (!best || sim > best.sim) best = { sim: sim, r: r, ref: ref, raw: accepts[i] };
+    }
+    return { ok: false, best: best, you: you };
+  }
+  function render(inp, res){
+    var v = inp.parentNode.querySelector('.verdict[data-for="' + inp.id + '"]');
+    if (!v) return;
+    if (res.empty) { v.innerHTML = '<span class="vd warn">還沒有作答</span>'; return; }
+    if (res.ok && res.kw) { v.innerHTML = '<span class="vd good">✓ 關鍵答案正確</span>　請再看下方解析確認說法。'; return; }
+    if (res.ok) { v.innerHTML = '<span class="vd good">✓ 和標準答案相同</span>'; return; }
+    if (res.kw) { v.innerHTML = '<span class="vd bad">✗ 還沒寫到關鍵答案</span>　看看下方解析。'; return; }
+    var b = res.best, you = res.you;
+    var yl = you.map(function(t, i){ return b.r.ka[i] ? esc(t) : '<span class="dx-bad">' + esc(t) + '</span>'; }).join(' ');
+    var rl = b.ref.map(function(t, i){ return b.r.kb[i] ? esc(t) : '<span class="dx-good">' + esc(t) + '</span>'; }).join(' ');
+    v.innerHTML = '<span class="vd bad">✗ 和標準答案不同（相似度 ' + Math.round(b.sim * 100) + '%）</span>' +
+      '<div class="dx"><div><b>你的答案</b>' + yl + '</div><div><b>標準答案</b>' + rl + '</div></div>' +
+      '<p class="dx-note">紅色是和標準答案不同的字，綠色是標準答案有、你沒寫到的字。大小寫與標點不影響比對；翻譯和改寫可能有其他正確寫法，請對照解析判斷。</p>';
+  }
+  function checkCard(c, idx){
+    var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+    var all = true, any = false;
+    ins.forEach(function(inp){ var r = judge(inp); render(inp, r); if (!r.empty) any = true; if (!r.ok) all = false; });
+    if (any) state[idx] = all;
+    var d = c.querySelector('details'); if (d && any) d.open = true;
+    updScore();
+  }
+
+  cards.forEach(function(c, idx){
+    if (c.classList.contains('mcq')) {
+      var answered = false;
+      c.querySelectorAll('.opt-btn').forEach(function(b){
+        b.addEventListener('click', function(){
+          if (answered) return; answered = true;
+          lockMcq(c, b.getAttribute('data-k'), idx);
+          saved['m' + idx] = b.getAttribute('data-k'); persist(); updScore();
+        });
+      });
+      if (saved['m' + idx]) { answered = true; lockMcq(c, saved['m' + idx], idx); }
+    } else {
+      var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+      ins.forEach(function(inp, k){
+        if (!inp.id) inp.id = 'q' + idx + '_' + k;
+        var key = 't' + idx + '_' + k;
+        if (saved[key]) inp.value = saved[key];
+        inp.addEventListener('input', function(){ saved[key] = inp.value; persist(); });
+        inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' && inp.tagName === 'INPUT') { e.preventDefault(); checkCard(c, idx); } });
+      });
+      var btn = c.querySelector('.chk');
+      if (btn) btn.addEventListener('click', function(){ checkCard(c, idx); });
+      if (ins.some(function(i){ return norm(i.value); }) && saved['c' + idx]) checkCard(c, idx);
+      if (btn) btn.addEventListener('click', function(){ saved['c' + idx] = 1; persist(); });
+    }
+  });
+
+  var reset = document.getElementById('resetPractice');
+  if (reset) reset.addEventListener('click', function(){
+    saved = {}; persist(); location.reload();
+  });
+  updScore();
+})();
+
+</script>
+</body>
+</html>

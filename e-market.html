@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>選擇、市場與價格｜筱葳學測公民</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+  /* Layout: single reading column, PART sections in sequence, English passages set apart as "answer sheet" panels */
+  :root{
+    --bg:#F6F3EE;
+    --surface:#FFFFFF;
+    --surface-2:#EFE8DF;
+    --ink:#2A2420;
+    --ink-muted:#6B5F55;
+    --line:#DDD1C3;
+    --accent:#A2581C;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#F5E4D3;
+    --amber:#2B6A99;  --amber-ink:#FFFFFF;
+    --teal:#4E9C8C;   --teal-ink:#0B241F;
+    --bad:#B5483B;    --bad-soft:#F6E1DD;
+    --hl-ts:#F3DFCB;  --hl-sup:#E1EAF3;  --hl-ex:#F7E3C6;  --hl-cs:#E9DDF2;
+    --grid-line:rgba(162,88,28,0.07);
+    --shadow:0 1px 2px rgba(28,42,36,0.06), 0 8px 24px rgba(28,42,36,0.05);
+    --f-display:'Noto Serif TC','Songti TC','PMingLiU',serif;
+    --f-body:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    --f-en:'Source Serif 4','Georgia','Times New Roman',serif;
+    --f-mono:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17120E; --surface:#211A15; --surface-2:#2A221B; --ink:#F0E9E2; --ink-muted:#B3A598;
+      --line:#3E3329; --accent:#E9A86A; --accent-ink:#1E1206; --accent-soft:#3A2716;
+      --amber:#86BCE6; --amber-ink:#0B1521; --teal:#3E8776; --teal-ink:#E7F5F1;
+      --bad:#E48A7D; --bad-soft:#3A201C;
+      --hl-ts:#4A3119; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+      --grid-line:rgba(233,168,106,0.07);
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#17120E; --surface:#211A15; --surface-2:#2A221B; --ink:#F0E9E2; --ink-muted:#B3A598;
+    --line:#3E3329; --accent:#E9A86A; --accent-ink:#1E1206; --accent-soft:#3A2716;
+    --amber:#86BCE6; --amber-ink:#0B1521; --teal:#3E8776; --teal-ink:#E7F5F1;
+    --bad:#E48A7D; --bad-soft:#3A201C;
+    --hl-ts:#4A3119; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+    --grid-line:rgba(233,168,106,0.07);
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:17px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+  h1,h2,h3{ font-family:var(--f-display); font-weight:600; text-wrap:balance; margin:0; color:var(--ink); }
+  a{ color:var(--accent); }
+  p{ margin:0; }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .mono{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:780px; margin:0 auto; padding-inline:1.25rem; padding-block:0 5rem; }
+
+  .back{ display:inline-block; margin-top:1.6rem; font-size:0.85rem; color:var(--ink-muted); text-decoration:none; }
+  .back:hover{ color:var(--accent); }
+
+  .hero{ padding-block:2rem 1.6rem; display:grid; gap:0.9rem; }
+  .eyebrow{
+    justify-self:start;
+    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em;
+    color:var(--accent); background:var(--accent-soft); border:1px solid var(--line);
+    padding:0.3rem 0.7rem; border-radius:4px;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.5rem); line-height:1.25; }
+  .hero .sub{ color:var(--ink-muted); font-size:1.03rem; max-width:640px; }
+
+  .lede{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:1.1rem 1.3rem; box-shadow:var(--shadow); display:grid; gap:0.9rem;
+  }
+  .toc{ display:flex; flex-wrap:wrap; gap:0.5rem; padding:0; margin:0; list-style:none; }
+  .toc a{
+    display:inline-flex; gap:0.45rem; align-items:center; text-decoration:none;
+    font-size:0.88rem; color:var(--ink); background:var(--surface-2); border:1px solid var(--line);
+    padding:0.25rem 0.75rem; border-radius:999px;
+  }
+  .toc a:hover{ border-color:var(--accent); color:var(--accent); }
+  .toc b{ font-family:var(--f-mono); color:var(--accent); font-weight:700; }
+
+  section.part{ margin-top:3.2rem; display:grid; gap:1.1rem; }
+  .part-kicker{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.08em; color:var(--accent); }
+  .part h2{ font-size:1.55rem; line-height:1.35; }
+  .part h3{ font-size:1.08rem; margin-top:0.4rem; }
+
+  .step{ display:grid; gap:0.5rem; }
+  .step-tag{
+    justify-self:start; font-family:var(--f-mono); font-size:0.72rem; font-weight:700;
+    padding:0.1rem 0.55rem; border-radius:4px; background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--line);
+  }
+  .step-tag.rule{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+  .prompt{
+    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber);
+    border-radius:6px; padding:0.9rem 1.1rem; font-size:0.95rem;
+  }
+  .prompt .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; display:block; margin-bottom:0.2rem; }
+
+  .sheet{
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:1rem 1.2rem; box-shadow:var(--shadow);
+    font-family:var(--f-en); font-size:1.06rem; line-height:1.85;
+  }
+  .sheet p + p{ margin-top:0.8rem; }
+  .sheet-head{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.3rem 1rem;
+    font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); margin-bottom:0.5rem;
+  }
+  .sheet.weak{ border-color:var(--bad); }
+  .sheet .err{ text-decoration:underline wavy var(--bad); text-underline-offset:4px; }
+
+  .compare{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:0.9rem; }
+  .compare > *{ min-width:0; }
+
+  .note{
+    background:var(--accent-soft); border:1px solid var(--line); border-radius:8px;
+    padding:0.8rem 1rem; font-size:0.93rem;
+  }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; font-size:0.92rem; min-width:520px; }
+  th,td{ text-align:left; padding:0.6rem 0.85rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--surface-2); font-weight:700; font-size:0.85rem; }
+  tr:last-child td{ border-bottom:none; }
+  td.en{ font-family:var(--f-en); font-size:1rem; }
+
+  /* score band bar, drawn to scale 0–20 */
+  .bands{ display:grid; gap:0.4rem; }
+  .band-bar{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:40px; }
+  .band-bar div{ display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.15; font-size:0.78rem; font-weight:700; }
+  .band-bar small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+  .b0{ background:var(--bad-soft); color:var(--bad); }
+  .b1{ background:var(--surface-2); color:var(--ink-muted); }
+  .b2{ background:var(--hl-sup); color:var(--ink); }
+  .b3{ background:var(--hl-ts); color:var(--ink); }
+  .b4{ background:var(--accent); color:var(--accent-ink); }
+  .band-scale{ display:flex; justify-content:space-between; font-family:var(--f-mono); font-size:0.7rem; color:var(--ink-muted); }
+
+  /* paragraph anatomy */
+  .anatomy-ctrl{ display:flex; flex-wrap:wrap; gap:0.5rem 1rem; align-items:center; }
+  button.toggle{
+    font:inherit; font-size:0.88rem; cursor:pointer;
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:0.4rem 0.9rem;
+  }
+  button.toggle[aria-pressed="false"]{ background:var(--surface); color:var(--accent); border:1px solid var(--accent); }
+  .key{ display:flex; flex-wrap:wrap; gap:0.3rem 0.9rem; font-size:0.82rem; color:var(--ink-muted); }
+  .key span{ display:inline-flex; align-items:center; gap:0.35rem; }
+  .key i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .anatomy.on .ts{ background:var(--hl-ts); }
+  .anatomy.on .sup{ background:var(--hl-sup); }
+  .anatomy.on .ex{ background:var(--hl-ex); }
+  .anatomy.on .cs{ background:var(--hl-cs); }
+  .anatomy .ts,.anatomy .sup,.anatomy .ex,.anatomy .cs{ border-radius:3px; padding:0 2px; transition:background .2s ease; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  .anatomy .tr{ font-weight:600; }
+  .anatomy.on .tr{ color:var(--accent); }
+
+  .skeleton{ display:grid; gap:0.4rem; counter-reset:sk; }
+  .skeleton div{
+    display:grid; grid-template-columns:7.5rem 1fr; gap:0.8rem; align-items:baseline;
+    padding:0.55rem 0.9rem; border-radius:6px; font-size:0.92rem;
+  }
+  .skeleton div > *{ min-width:0; }
+  .skeleton b{ font-size:0.86rem; }
+  @media (max-width:480px){ .skeleton div{ grid-template-columns:1fr; gap:0.1rem; } }
+
+  ul.clean{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; }
+
+  .timeline{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:46px; }
+  .timeline div{ display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:0.78rem; font-weight:700; line-height:1.15; text-align:center; padding:0 0.2rem; }
+  .timeline small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+
+  .checklist{ display:grid; gap:0.35rem; }
+  .checklist label{ display:flex; gap:0.6rem; align-items:flex-start; font-size:0.93rem; cursor:pointer; }
+  .checklist input{ margin-top:0.45rem; accent-color:var(--accent); }
+
+  /* practice */
+  .practice{ margin-top:3.2rem; display:grid; gap:1rem; }
+  .qcard{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; display:grid; gap:0.6rem; }
+  .qhead{ display:flex; gap:0.6rem; align-items:baseline; }
+  .qnum{ font-family:var(--f-mono); font-weight:700; color:var(--accent); flex:none; }
+  .qcard .en{ font-family:var(--f-en); font-size:1.02rem; }
+  .opts{ margin:0; padding-left:1.4rem; font-family:var(--f-en); font-size:1rem; display:grid; gap:0.15rem; }
+  details{ border-top:1px dashed var(--line); padding-top:0.5rem; }
+  summary{ cursor:pointer; color:var(--accent); font-size:0.88rem; font-weight:500; }
+  details .ans{ margin-top:0.5rem; font-size:0.93rem; }
+
+  /* draft box */
+  .draft{ display:grid; gap:0.6rem; }
+  textarea{
+    width:100%; min-height:260px; resize:vertical;
+    font-family:var(--f-en); font-size:1.02rem; line-height:1.75;
+    background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:0.9rem 1rem;
+  }
+  textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .meters{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .meter{ font-family:var(--f-mono); font-size:0.8rem; padding:0.25rem 0.7rem; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-muted); }
+  .meter.ok{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .meter.warn{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+
+  footer{ margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-muted); font-size:0.85rem; display:grid; gap:0.4rem; }
+  footer .id{ font-family:var(--f-mono); font-size:0.8rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem; }
+</style>
+<style>
+  .wt td.zh{ transition:filter .2s ease, opacity .2s ease; }
+  .masked td.zh{ filter:blur(6px); opacity:.55; user-select:none; }
+  .masked td.zh:hover,.masked td.zh:focus{ filter:none; opacity:1; }
+  .tools{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.85rem; color:var(--ink-muted); }
+  .pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .pair > *{ min-width:0; }
+  .ex-line{ font-family:var(--f-en); font-size:1.02rem; }
+  .ex-line + .ex-line{ margin-top:0.3rem; }
+  .ok{ color:var(--accent); font-weight:600; }
+  .no{ color:var(--bad); text-decoration:line-through; text-decoration-thickness:1px; }
+  .hl{ background:var(--hl-ex); border-radius:3px; padding:0 2px; }
+  .hl2{ background:var(--hl-ts); border-radius:3px; padding:0 2px; }
+  .hl3{ background:var(--hl-sup); border-radius:3px; padding:0 2px; }
+  .formula{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1.1rem; font-family:var(--f-mono); font-size:0.9rem; line-height:1.9; overflow-x:auto; }
+</style>
+<style>
+  .opt-list{ display:grid; gap:0.4rem; }
+  .opt-btn{
+    display:block; width:100%; text-align:left; cursor:pointer;
+    font-family:var(--f-en); font-size:1rem; line-height:1.5; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.45rem 0.8rem;
+  }
+  .opt-btn:hover{ border-color:var(--accent); }
+  .opt-btn.right{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .opt-btn.wrong{ background:var(--bad-soft); color:var(--bad); border-color:var(--bad); }
+  .opt-btn:disabled{ cursor:default; }
+  .scorebar{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.9rem; color:var(--ink-muted); }
+  .scorebar .meter{ font-size:0.85rem; }
+  .passage{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; font-family:var(--f-en); font-size:1.04rem; line-height:1.9; box-shadow:var(--shadow); }
+  .passage p + p{ margin-top:0.7rem; }
+  .blank{ font-family:var(--f-mono); font-size:0.85rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:4px; padding:0 0.35rem; }
+  .optgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.4rem; font-family:var(--f-en); }
+  .optgrid span{ background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.3rem 0.6rem; }
+  .fill{ width:100%; font:inherit; font-family:var(--f-en); background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:0.4rem 0.6rem; }
+  .fill:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .panels{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0.6rem; }
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.8rem; font-size:0.9rem; }
+  .panel b{ font-family:var(--f-mono); color:var(--accent); display:block; font-size:0.78rem; }
+  .log-form{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.6rem; align-items:end; }
+  .log-form label{ display:grid; gap:0.2rem; font-size:0.82rem; color:var(--ink-muted); }
+  select.fill{ appearance:auto; }
+</style>
+<style>
+  .chk-row{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; }
+  textarea.ans-in{ min-height:0; resize:vertical; font-size:1rem; line-height:1.6; padding:0.5rem 0.7rem; }
+  .verdict{ font-size:0.9rem; display:grid; gap:0.35rem; }
+  .verdict:empty{ display:none; }
+  .vd{ display:inline-block; font-weight:700; font-size:0.85rem; padding:0.1rem 0.6rem; border-radius:999px; }
+  .vd.good{ background:var(--accent); color:var(--accent-ink); }
+  .vd.bad{ background:var(--bad-soft); color:var(--bad); }
+  .vd.warn{ background:var(--surface-2); color:var(--ink-muted); }
+  .dx{ display:grid; gap:0.25rem; font-family:var(--f-en); font-size:1rem; background:var(--surface-2); border-radius:6px; padding:0.5rem 0.75rem; }
+  .dx b{ font-family:var(--f-body); font-size:0.75rem; color:var(--ink-muted); display:inline-block; min-width:4.5rem; }
+  .dx-bad{ color:var(--bad); text-decoration:underline wavy var(--bad); text-underline-offset:3px; }
+  .dx-good{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+  .dx-note{ font-size:0.8rem; color:var(--ink-muted); }
+  td .verdict{ margin-top:0.3rem; }
+</style>
+<style>
+  /* history additions: vertical chronology, primary-source boxes */
+  .chron{ list-style:none; margin:0.8rem 0 0; padding:0 0 0 0.2rem; display:grid; gap:0; }
+  .chron li{ display:grid; grid-template-columns:5.6rem 1fr; gap:0.9rem; position:relative; padding:0.35rem 0 0.55rem; }
+  .chron li > *{ min-width:0; }
+  .chron li::before{ content:''; position:absolute; left:6.05rem; top:0; bottom:0; width:2px; background:var(--line); }
+  .chron li::after{ content:''; position:absolute; left:calc(6.05rem - 4px); top:0.85rem; width:10px; height:10px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
+  .chron li.turn::after{ background:var(--accent); }
+  .chron .yr{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:0.82rem; font-weight:700; color:var(--accent); text-align:right; padding-top:0.15rem; }
+  .chron .ev{ padding-left:0.9rem; font-size:0.95rem; line-height:1.65; }
+  .chron .ev small{ display:block; color:var(--ink-muted); font-size:0.82rem; }
+  @media (max-width:480px){
+    .chron li{ grid-template-columns:4.4rem 1fr; gap:0.6rem; }
+    .chron li::before{ left:4.75rem; } .chron li::after{ left:calc(4.75rem - 4px); }
+  }
+  .src{ background:var(--surface-2); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.7rem 1rem; font-family:var(--f-display); font-size:1rem; line-height:1.85; margin:0; }
+  .src cite{ display:block; font-style:normal; font-family:var(--f-body); font-size:0.78rem; color:var(--ink-muted); margin-top:0.3rem; }
+  .qcard .qtext{ margin:0; }
+  textarea.fill{ font-family:var(--f-body); }
+  .kwtag{ font-family:var(--f-mono); font-size:0.75rem; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); border-radius:4px; padding:0.05rem 0.4rem; white-space:nowrap; }
+</style>
+
+<style>
+  /* geography additions */
+  .chain .yr{ font-family:var(--f-body); font-size:0.8rem; }
+  .fig{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; box-shadow:var(--shadow); display:grid; gap:0.4rem; }
+  .fig svg{ width:100%; height:auto; display:block; }
+  .fig figcaption{ font-size:0.82rem; color:var(--ink-muted); }
+  .fig text{ font-family:var(--f-body); }
+  .twocol{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .twocol > *{ min-width:0; }
+  .card-mini{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.9rem; font-size:0.92rem; }
+  .card-mini b{ display:block; font-family:var(--f-display); font-size:1rem; margin-bottom:0.2rem; }
+</style>
+<style>
+  /* civics additions */
+  .chain{ list-style:none; margin:0; padding:0; display:grid; gap:0.4rem; }
+  .chain li{ display:grid; grid-template-columns:auto 1fr; gap:0.7rem; align-items:baseline; background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:0.5rem 0.85rem; font-size:0.93rem; }
+  .chain li > *{ min-width:0; }
+  .chain li b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); white-space:nowrap; }
+  .chain li.arrow{ background:none; border:none; padding:0 0 0 1.2rem; color:var(--ink-muted); font-size:0.85rem; }
+  .vs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:0.8rem; }
+  .vs > *{ min-width:0; }
+  .case{ background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.8rem 1.1rem; font-size:0.95rem; display:grid; gap:0.35rem; }
+  .case .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; }
+  .opt-btn{ font-family:var(--f-body); }
+  .bridge{ display:grid; gap:0.45rem; border-top:1px dashed var(--line); padding-top:0.8rem; font-size:0.9rem; }
+  .bridge .where{ display:flex; flex-wrap:wrap; gap:0.4rem; align-items:center; }
+  .bridge .tag{ font-family:var(--f-mono); font-size:0.72rem; font-weight:700; padding:0.1rem 0.55rem; border-radius:4px; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); }
+  .bridge .tag.th{ background:var(--surface-2); color:var(--ink-muted); }
+  .bridge .step{ display:grid; grid-template-columns:3.2rem 1fr; gap:0.6rem; align-items:baseline; }
+  .bridge .step > *{ min-width:0; }
+  .bridge .step b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); }
+  .bridge .step.now b{ color:var(--accent); }
+  .bridge a{ text-decoration:none; font-weight:500; }
+  .bridge a:hover{ text-decoration:underline; }
+  .xl{ display:grid; gap:0.5rem; }
+  .xl a{ display:grid; grid-template-columns:minmax(6.5rem,auto) 1fr; gap:0.3rem 0.9rem; align-items:baseline; text-decoration:none; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.9rem; font-size:0.92rem; }
+  .xl a > *{ min-width:0; }
+  .xl a:hover{ border-color:var(--accent); }
+  .xl a b{ font-family:var(--f-display); color:var(--accent); }
+  .xl a small{ display:block; color:var(--ink-muted); font-size:0.8rem; }
+  @media (max-width:480px){ .xl a{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="page">
+<a class="back" href="index.html">← 回到公民學習地圖</a>
+<header class="hero">
+  <span class="eyebrow">經濟與生活・4-1</span>
+  <h1>選擇、市場與價格</h1>
+  <p class="sub">第 10 週。資源稀少，所以每個選擇都有代價；市場用價格協調買賣雙方。這一節的供需圖是經濟題的地基。</p>
+</header>
+<div class="lede"><p>這一節回答一個問題：「為什麼颱風一來，菜價就漲？政府凍漲價格又會發生什麼事？」</p><div class="bridge"><div class="where"><span class="tag">經濟・資源怎麼分</span><span class="tag th">貫穿線：效率與公平</span></div><div class="step"><b>承接</b><span><a href="l-criminal.html">3-3　刑法與司法程序</a>：法律定下遊戲規則。</span></div><div class="step now"><b>本週</b><span>資源稀少要選擇，市場用價格協調；政府管制價格會有副作用。</span></div><div class="step"><b>接到</b><span><a href="e-failure.html">4-2　市場失靈與政府</a>：市場不是萬能，有時會失靈。</span></div></div><ul class="toc"><li><a href="#p1"><b>1</b>選擇</a></li><li><a href="#p2"><b>2</b>供給與需求</a></li><li><a href="#p3"><b>3</b>價格管制</a></li><li><a href="#practice"><b>✎</b>練習</a></li></ul></div>
+<section class="part" id="p1"><span class="part-kicker">PART 1 ・ 選擇</span><h2>稀少性與機會成本</h2><ul class="clean"><li><b>稀少性</b>：資源有限、慾望無窮，所以必須選擇。</li><li><b>機會成本</b>＝外顯成本（實際付出的金錢）＋隱含成本（放棄的其他選擇中價值最高者）。</li><li><b>沉沒成本</b>：已經付出、無法收回的成本，理性決策不應再考慮。</li><li><b>邊際思考</b>：多做一單位帶來的好處是否大於多付出的成本。</li></ul><div class="case"><span class="label">計算示範</span><div>小美週末可以去打工（賺 1,000 元）、當家教（賺 1,500 元），最後選擇花 300 元看電影。機會成本＝300（外顯）＋1,500（放棄的最高價值）＝<b>1,800 元</b>。注意：只算價值最高的那一個，不是把放棄的全部加總。</div></div></section>
+<section class="part" id="p2"><span class="part-kicker">PART 2 ・ 供需</span><h2>需求、供給與均衡</h2><div class="table-wrap"><table><thead><tr><th></th><th>需求</th><th>供給</th></tr></thead><tbody><tr><td>法則</td><td>價格上升，需求量減少</td><td>價格上升，供給量增加</td></tr><tr><td>「量」的變動（沿著線移動）</td><td>只因為商品本身價格改變</td><td>只因為商品本身價格改變</td></tr><tr><td>「線」的變動（整條線移動）</td><td>所得、偏好、相關商品價格、預期、消費人數</td><td>生產成本、技術、預期、廠商家數、天候</td></tr></tbody></table></div><figure class="fig"><svg viewBox="0 0 420 260" role="img" aria-label="需求增加使需求線右移，均衡價格與交易量都上升">
+<line x1="50" y1="20" x2="50" y2="220" stroke="currentColor" stroke-width="1.5" style="color:var(--ink-muted)"/>
+<line x1="50" y1="220" x2="400" y2="220" stroke="currentColor" stroke-width="1.5" style="color:var(--ink-muted)"/>
+<text x="20" y="30" font-size="13" fill="var(--ink-muted)">價格</text><text x="370" y="245" font-size="13" fill="var(--ink-muted)">數量</text>
+<line x1="80" y1="200" x2="330" y2="40" stroke="var(--amber)" stroke-width="3"/><text x="336" y="40" font-size="13" fill="var(--amber)" font-weight="700">S</text>
+<line x1="80" y1="50" x2="300" y2="200" stroke="var(--ink-muted)" stroke-width="2.5" stroke-dasharray="6 4"/><text x="304" y="210" font-size="13" fill="var(--ink-muted)" font-weight="700">D</text>
+<line x1="150" y1="40" x2="370" y2="190" stroke="var(--accent)" stroke-width="3"/><text x="374" y="196" font-size="13" fill="var(--accent)" font-weight="700">D′</text>
+<circle cx="194" cy="127" r="5" fill="var(--ink-muted)"/><circle cx="237" cy="99" r="6" fill="var(--accent)"/>
+<line x1="50" y1="127" x2="194" y2="127" stroke="var(--ink-muted)" stroke-dasharray="3 3"/><line x1="50" y1="99" x2="237" y2="99" stroke="var(--accent)" stroke-dasharray="3 3"/>
+<line x1="194" y1="127" x2="194" y2="220" stroke="var(--ink-muted)" stroke-dasharray="3 3"/><line x1="237" y1="99" x2="237" y2="220" stroke="var(--accent)" stroke-dasharray="3 3"/>
+<text x="26" y="131" font-size="12" fill="var(--ink-muted)">P₁</text><text x="26" y="103" font-size="12" fill="var(--accent)">P₂</text>
+<text x="186" y="238" font-size="12" fill="var(--ink-muted)">Q₁</text><text x="230" y="238" font-size="12" fill="var(--accent)">Q₂</text>
+<path d="M210 60 L250 60" stroke="var(--accent)" stroke-width="2" marker-end="url(#ah)"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="var(--accent)"/></marker></defs>
+</svg><figcaption>需求增加（例如所得提高、偏好增加）：需求線由 D 右移到 D′，均衡價格 P₁ → P₂ 上升，交易量 Q₁ → Q₂ 增加。</figcaption></figure><div class="table-wrap"><table><thead><tr><th>變動</th><th>均衡價格</th><th>均衡交易量</th></tr></thead><tbody><tr><td>需求增加（右移）</td><td>上升</td><td>增加</td></tr><tr><td>需求減少（左移）</td><td>下降</td><td>減少</td></tr><tr><td>供給增加（右移）</td><td>下降</td><td>增加</td></tr><tr><td>供給減少（左移）</td><td>上升</td><td>減少</td></tr></tbody></table></div><div class="vs"><div class="twocol"><div class="card-mini"><b>替代品</b>可以互相取代，例如豬肉與雞肉。豬肉漲價 → 雞肉需求增加。</div><div class="card-mini"><b>互補品</b>一起使用，例如咖啡與奶精。咖啡漲價 → 奶精需求減少。</div></div></div></section>
+<section class="part" id="p3"><span class="part-kicker">PART 3 ・ 價格管制</span><h2>價格上限與價格下限</h2><div class="table-wrap"><table><thead><tr><th></th><th>價格上限</th><th>價格下限</th></tr></thead><tbody><tr><td>設定位置</td><td>低於均衡價格才有效</td><td>高於均衡價格才有效</td></tr><tr><td>目的</td><td>保護消費者（例：房租、油價凍漲）</td><td>保護生產者或勞工（例：農產品保證價格、基本工資）</td></tr><tr><td>結果</td><td>需求量 > 供給量 → <b>短缺</b>、排隊、黑市</td><td>供給量 > 需求量 → <b>過剩</b>，基本工資可能使勞動供過於求（失業）</td></tr></tbody></table></div><div class="note">判斷口訣：「上限在下面 → 短缺；下限在上面 → 過剩」。</div></section>
+<section class="practice" id="practice"><span class="part-kicker">練習</span><h2>動手試試看</h2><div class="scorebar"><span>選擇題點選答案、簡答題按「對答案」，作答紀錄會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div><div class="qcard mcq" data-ans="D"><div class="qhead"><span class="qnum">Q1</span><span>小美週末可以打工賺 1,000 元或當家教賺 1,500 元，最後花 300 元去看電影。看電影的機會成本是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 300 元</button><button class="opt-btn" type="button" data-k="B">(B) 1,300 元</button><button class="opt-btn" type="button" data-k="C">(C) 2,800 元</button><button class="opt-btn" type="button" data-k="D">(D) 1,800 元</button></div><details><summary>看解析</summary><div class="ans"><b>D。</b>外顯成本 300＋放棄選擇中價值最高的 1,500＝1,800 元。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q2</span><span>咖啡價格大漲，對奶精市場最可能的影響是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 奶精需求增加</button><button class="opt-btn" type="button" data-k="B">(B) 奶精需求減少</button><button class="opt-btn" type="button" data-k="C">(C) 奶精供給增加</button><button class="opt-btn" type="button" data-k="D">(D) 沒有影響</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>咖啡和奶精是互補品，咖啡買少了，奶精需求也減少（需求線左移）。</div></details></div><div class="qcard mcq" data-ans="D"><div class="qhead"><span class="qnum">Q3</span><span>豬瘟使豬肉價格上漲，雞肉市場最可能？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 雞肉需求減少，價格下降</button><button class="opt-btn" type="button" data-k="B">(B) 雞肉供給增加</button><button class="opt-btn" type="button" data-k="C">(C) 雞肉需求量減少</button><button class="opt-btn" type="button" data-k="D">(D) 雞肉需求增加，價格上升</button></div><details><summary>看解析</summary><div class="ans"><b>D。</b>豬肉與雞肉是替代品，豬肉變貴，消費者改買雞肉。</div></details></div><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q4</span><span>颱風使蔬菜產量大減，蔬菜市場的均衡會如何變化？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 價格上升、交易量減少</button><button class="opt-btn" type="button" data-k="B">(B) 價格下降、交易量增加</button><button class="opt-btn" type="button" data-k="C">(C) 價格上升、交易量增加</button><button class="opt-btn" type="button" data-k="D">(D) 價格與交易量都不變</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>供給減少（左移）：價格上升、交易量減少。</div></details></div><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q5</span><span>政府把房租上限訂在低於市場均衡的水準，最可能出現？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 房屋過剩</button><button class="opt-btn" type="button" data-k="B">(B) 房租上漲</button><button class="opt-btn" type="button" data-k="C">(C) 房屋短缺</button><button class="opt-btn" type="button" data-k="D">(D) 均衡不變</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>有效的價格上限造成需求量大於供給量，形成短缺。</div></details></div><div class="qcard mcq" data-ans="D"><div class="qhead"><span class="qnum">Q6</span><span>阿明買了不能退票的演唱會門票，當天卻發燒。決定要不要去時，門票錢應如何看待？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 是機會成本，一定要去才划算</button><button class="opt-btn" type="button" data-k="B">(B) 是外部成本</button><button class="opt-btn" type="button" data-k="C">(C) 是邊際利益</button><button class="opt-btn" type="button" data-k="D">(D) 是沉沒成本，不應影響決定</button></div><details><summary>看解析</summary><div class="ans"><b>D。</b>已付出、收不回的成本是沉沒成本，理性決策應只比較去與不去的未來好壞。</div></details></div><div class="qcard txt"><div class="qhead"><span class="qnum">Q7</span><span>「需求量變動」和「需求變動」有什麼不同？</span></div><textarea class="fill ans-in" rows="3" id="e1-7" autocomplete="off" spellcheck="false" aria-label="作答" placeholder="用一到兩句話寫下你的答案" data-kw="[[&quot;本身價格&quot;, &quot;自身價格&quot;, &quot;價格&quot;, &quot;沿著&quot;, &quot;線上&quot;], [&quot;其他&quot;, &quot;所得&quot;, &quot;偏好&quot;, &quot;移動&quot;, &quot;整條&quot;, &quot;平移&quot;]]"></textarea><div class="verdict" data-for="e1-7"></div><div class="chk-row"><button class="toggle chk" type="button">對答案</button></div><details><summary>看參考答案與解析</summary><div class="ans"><p class="ex-line">需求量變動是因為商品本身價格改變，在同一條需求線上移動；需求變動是價格以外的因素（所得、偏好、相關商品價格、預期等）改變，使整條需求線移動。</p><p style="margin-top:0.3rem">關鍵在「原因是不是商品本身的價格」。</p><p style="margin-top:0.3rem;font-size:0.85rem;color:var(--ink-muted)">系統只檢查是否寫到關鍵詞：<span class="kwtag">本身價格 / 自身價格 / 價格 / 沿著 / 線上</span>　<span class="kwtag">其他 / 所得 / 偏好 / 移動 / 整條 / 平移</span>（每組至少寫到一個）。寫得通順、因果清楚才是得分關鍵，請對照參考答案。</p></div></details></div></section>
+<section class="part" id="xlinks"><span class="part-kicker">回頭看・往後接</span><h2>這些概念在別的單元還會出現</h2><div class="xl"><a href="skill-read.html"><span><b>機會成本判讀</b></span><span>情境題判讀四步驟<small>← 回頭看第 1 週・題目線索速查</small></span></a><a href="c-justice.html"><span><b>價格管制與弱勢</b></span><span>1-3　公平正義與社會安全<small>← 回頭看第 3 週・凍漲是為了公平，卻可能造成短缺</small></span></a><a href="e-failure.html"><span><b>補貼與外部性</b></span><span>4-2　市場失靈與政府<small>往後接第 11 週 →・正外部性用補貼</small></span></a></div></section>
+<section class="part"><span class="part-kicker">本節重點</span><ul class="clean"><li>機會成本＝外顯成本＋放棄的最高價值；沉沒成本不列入決策。</li><li>本身價格 → 量的變動（沿線）；其他因素 → 線的移動。</li><li>需求增加：價量齊升；供給增加：價跌量增。</li><li>替代品漲價 → 需求增加；互補品漲價 → 需求減少。</li><li>價格上限 → 短缺；價格下限 → 過剩。</li></ul></section>
+<footer>
+  <p>練習題的情境與數據為教學用自編或示意；內容依部定必修「公民與社會」課程整理，法規以現行條文為準，若有修法請以最新規定為準。正式考試範圍以大考中心公告為準。</p>
+  <div class="id"><span>筱葳學測公民</span><span>經濟與生活 4-1</span></div>
+</footer>
+</div>
+<script>
+(function(){
+  var PAGE = (document.querySelector('.eyebrow') || {}).textContent || location.pathname;
+  var SKEY = 'civ-practice-v1:' + PAGE;
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(SKEY) || '{}') || {}; } catch (e) { saved = {}; }
+  function persist(){ try { localStorage.setItem(SKEY, JSON.stringify(saved)); } catch (e) {} }
+
+  var cards = [].slice.call(document.querySelectorAll('.qcard.mcq[data-ans], .qcard.txt'));
+  var state = {};
+  var sb = document.getElementById('score');
+  function updScore(){
+    if (!sb) return;
+    var ok = 0, done = 0;
+    cards.forEach(function(c, i){ if (state[i] !== undefined) { done++; if (state[i]) ok++; } });
+    sb.textContent = '答對 ' + ok + ' / ' + cards.length + (done === cards.length && cards.length ? '・全部完成' : '');
+    sb.className = 'meter ' + (done === cards.length && cards.length ? (ok / cards.length >= 0.8 ? 'ok' : 'warn') : '');
+  }
+
+  /* ---------- multiple choice ---------- */
+  function lockMcq(q, k, idx){
+    var ans = q.getAttribute('data-ans');
+    var btn = q.querySelector('.opt-btn[data-k="' + k + '"]');
+    if (!btn) return;
+    if (k === ans) btn.classList.add('right');
+    else { btn.classList.add('wrong'); var r = q.querySelector('.opt-btn[data-k="' + ans + '"]'); if (r) r.classList.add('right'); }
+    q.querySelectorAll('.opt-btn').forEach(function(x){ x.disabled = true; });
+    var d = q.querySelector('details'); if (d) d.open = true;
+    state[idx] = (k === ans);
+  }
+
+  /* ---------- text answers ---------- */
+  function expand(s){
+    return s.replace(/[’‘`]/g, "'")
+      .replace(/\b(won)'t\b/g, 'will not').replace(/\bcan't\b/g, 'can not').replace(/\bcannot\b/g, 'can not')
+      .replace(/n't\b/g, ' not')
+      .replace(/\b(it|that|there|what|he|she|who)'s\b/g, '$1 is')
+      .replace(/'re\b/g, ' are').replace(/'ve\b/g, ' have').replace(/'ll\b/g, ' will').replace(/\bi'm\b/g, 'i am');
+  }
+  function norm(s){
+    s = expand(String(s).toLowerCase());
+    s = s.replace(/[（）()「」『』“”"]/g, ' ')
+         .replace(/[，。、！？；：,.!?;:／\/|]/g, ' ')
+         .replace(/(\w)-(\w)/g, '$1$2')
+         .replace(/\s+/g, ' ').trim();
+    return s;
+  }
+  function toks(s){ return norm(s) ? norm(s).split(' ') : []; }
+  function lcs(a, b){
+    var m = a.length, n = b.length, dp = [], i, j;
+    for (i = 0; i <= m; i++) { dp.push(new Array(n + 1).fill(0)); }
+    for (i = m - 1; i >= 0; i--) for (j = n - 1; j >= 0; j--)
+      dp[i][j] = a[i] === b[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    var ka = {}, kb = {}; i = 0; j = 0;
+    while (i < m && j < n) {
+      if (a[i] === b[j]) { ka[i] = 1; kb[j] = 1; i++; j++; }
+      else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+    }
+    return { len: dp[0][0], ka: ka, kb: kb };
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function judge(inp){
+    var val = inp.value;
+    if (!norm(val)) return { empty: true };
+    var kw = inp.getAttribute('data-kw');
+    if (kw) {
+      var groups = JSON.parse(kw), low = val.toLowerCase();
+      var ok = groups.every(function(g){ return g.some(function(w){ return low.indexOf(String(w).toLowerCase()) !== -1; }); });
+      return { kw: true, ok: ok };
+    }
+    var accepts = (inp.getAttribute('data-accept') || '').split('||').filter(Boolean);
+    var you = toks(val), best = null;
+    for (var i = 0; i < accepts.length; i++) {
+      var ref = toks(accepts[i]);
+      if (ref.join(' ') === you.join(' ')) return { ok: true, exact: true };
+      var r = lcs(you, ref), sim = (2 * r.len) / (you.length + ref.length || 1);
+      if (!best || sim > best.sim) best = { sim: sim, r: r, ref: ref, raw: accepts[i] };
+    }
+    return { ok: false, best: best, you: you };
+  }
+  function render(inp, res){
+    var v = inp.parentNode.querySelector('.verdict[data-for="' + inp.id + '"]');
+    if (!v) return;
+    if (res.empty) { v.innerHTML = '<span class="vd warn">還沒有作答</span>'; return; }
+    if (res.ok && res.kw) { v.innerHTML = '<span class="vd good">✓ 關鍵答案正確</span>　請再看下方解析確認說法。'; return; }
+    if (res.ok) { v.innerHTML = '<span class="vd good">✓ 和標準答案相同</span>'; return; }
+    if (res.kw) { v.innerHTML = '<span class="vd bad">✗ 還沒寫到關鍵答案</span>　看看下方解析。'; return; }
+    var b = res.best, you = res.you;
+    var yl = you.map(function(t, i){ return b.r.ka[i] ? esc(t) : '<span class="dx-bad">' + esc(t) + '</span>'; }).join(' ');
+    var rl = b.ref.map(function(t, i){ return b.r.kb[i] ? esc(t) : '<span class="dx-good">' + esc(t) + '</span>'; }).join(' ');
+    v.innerHTML = '<span class="vd bad">✗ 和標準答案不同（相似度 ' + Math.round(b.sim * 100) + '%）</span>' +
+      '<div class="dx"><div><b>你的答案</b>' + yl + '</div><div><b>標準答案</b>' + rl + '</div></div>' +
+      '<p class="dx-note">紅色是和標準答案不同的字，綠色是標準答案有、你沒寫到的字。大小寫與標點不影響比對；翻譯和改寫可能有其他正確寫法，請對照解析判斷。</p>';
+  }
+  function checkCard(c, idx){
+    var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+    var all = true, any = false;
+    ins.forEach(function(inp){ var r = judge(inp); render(inp, r); if (!r.empty) any = true; if (!r.ok) all = false; });
+    if (any) state[idx] = all;
+    var d = c.querySelector('details'); if (d && any) d.open = true;
+    updScore();
+  }
+
+  cards.forEach(function(c, idx){
+    if (c.classList.contains('mcq')) {
+      var answered = false;
+      c.querySelectorAll('.opt-btn').forEach(function(b){
+        b.addEventListener('click', function(){
+          if (answered) return; answered = true;
+          lockMcq(c, b.getAttribute('data-k'), idx);
+          saved['m' + idx] = b.getAttribute('data-k'); persist(); updScore();
+        });
+      });
+      if (saved['m' + idx]) { answered = true; lockMcq(c, saved['m' + idx], idx); }
+    } else {
+      var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+      ins.forEach(function(inp, k){
+        if (!inp.id) inp.id = 'q' + idx + '_' + k;
+        var key = 't' + idx + '_' + k;
+        if (saved[key]) inp.value = saved[key];
+        inp.addEventListener('input', function(){ saved[key] = inp.value; persist(); });
+        inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' && inp.tagName === 'INPUT') { e.preventDefault(); checkCard(c, idx); } });
+      });
+      var btn = c.querySelector('.chk');
+      if (btn) btn.addEventListener('click', function(){ checkCard(c, idx); });
+      if (ins.some(function(i){ return norm(i.value); }) && saved['c' + idx]) checkCard(c, idx);
+      if (btn) btn.addEventListener('click', function(){ saved['c' + idx] = 1; persist(); });
+    }
+  });
+
+  var reset = document.getElementById('resetPractice');
+  if (reset) reset.addEventListener('click', function(){
+    saved = {}; persist(); location.reload();
+  });
+  updScore();
+})();
+
+</script>
+</body>
+</html>
